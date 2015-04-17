@@ -61,3 +61,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+#Unity Visual Studio Tools
+/Assets/UnityVS
+/Assets/UnityVS.meta
