@@ -6,7 +6,7 @@ public class Hero : Character {
     //Private variables
     private float x = 0f;
     
-        public override void Move()
+    public override void Move()
         {
              x = Input.GetAxis("Horizontal") * forceMultiplier;
             //y = Input.GetAxis("Vertical") * forceMultiplier;
@@ -26,15 +26,7 @@ public class Hero : Character {
             {
                 Jump();  
             }
- 	        base.Move();
+ 	        
         }
-    
-        
-       
-        
-
-        
-
-
     }
 
