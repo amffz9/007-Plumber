@@ -14,13 +14,21 @@ public class Character : MonoBehaviour {
 
     void Update()
     {
+        Move();
+    }
+    public virtual void Move()
+    {
+        CharacterFace();
+    }
+    public void CharacterFace()
+    {
         if (facingRight == false)
         {
-            
+
             if (transform.localScale.x > 0)
             {
                 switchX();
-            }  
+            }
         }
         else
         {
@@ -45,10 +53,13 @@ public class Character : MonoBehaviour {
     }
     public bool OnGround()
     {
-        Ray ray = new Ray(transform.position, transform.up);
+        Ray ray = new Ray(transform.position, transform.up * -1);//raycast down
         RaycastHit hit;
+        Physics.Raycast(ray, out hit, 20);
 
-        if (Physics.Raycast(ray, out hit, 1 << LayerMask.NameToLayer("Ground")))
+        if ((hit.distance) < 1 && (hit.distance != 0) && 
+            (hit.collider.gameObject.layer 
+            == LayerMask.NameToLayer("Ground")))
         {
             return true;
         }
