@@ -24,6 +24,7 @@ public class Hero : Character {
             
             if ((Input.GetAxis("Jump") != 0) && OnGround())
             {
+                Debug.Log("Testing jump");
                 Jump();  
             }
         }
