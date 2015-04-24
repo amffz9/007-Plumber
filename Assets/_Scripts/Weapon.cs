@@ -24,8 +24,20 @@ public class Weapon : MonoBehaviour
 
     public void Shoot()
     {
-        var instantiatedBullet = Instantiate(bullet, transform.position, transform.rotation) as GameObject;  
-        instantiatedBullet.rigidbody.AddForce(Vector3.right * speed);
+        var direction = gameObject.GetComponent<Character>();
+        Quaternion rotation = new Quaternion();
+        rotation.z = -90;
+        var instantiatedBullet = Instantiate(bullet, transform.position, rotation) as GameObject;  
+        if(direction.facingRight == true)
+        {
+            instantiatedBullet.rigidbody.AddForce(Vector3.right * speed);
+            Destroy(instantiatedBullet, 1);
+        }
+        else if(direction.facingRight == false)
+        {
+            instantiatedBullet.rigidbody.AddForce(Vector3.left * speed);
+            Destroy(instantiatedBullet, 1);
+        }
     }
 
     void Kick()
