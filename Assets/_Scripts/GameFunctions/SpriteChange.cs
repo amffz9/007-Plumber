@@ -24,7 +24,7 @@ public class SpriteChange : Character {
          * This is were all the sprite switching is done on the characters
          * */
         velocity = this.rigidbody.velocity;
-        Debug.Log(velocity.x);
+        
         bool isStill = velocity.x >-.1 && velocity.x <.1;
         if (isStill /*&& OnGround()*/)//changing sprite direction is done in the Character Script
         {

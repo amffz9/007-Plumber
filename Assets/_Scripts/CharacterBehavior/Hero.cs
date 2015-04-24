@@ -21,10 +21,14 @@ public class Hero : Character {
             }
 
             rigidbody.AddForce(x, 0, 0);
-
-            if (Input.GetKeyDown(KeyCode.UpArrow) && OnGround())
+            
+            if ((Input.GetAxis("Jump") != 0) && OnGround())
             {
                 Jump();  
+            }
+            if (Input.GetAxis("Fire1") != 0)
+            {
+                Shoot();
             }
  	        
         }

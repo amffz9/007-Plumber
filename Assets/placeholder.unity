@@ -240,7 +240,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8cf7aa85206e2d844b820e7e127c80a0, type: 3}
+  m_Sprite: {fileID: 21300020, guid: 8cf7aa85206e2d844b820e7e127c80a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &266853543
 Transform:
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceMultiplier: 15
   maxVelocity: 5
-  jumpStrength: 500
+  jumpStrength: 100
   facingRight: 1
 --- !u!114 &266853545
 MonoBehaviour:
@@ -286,7 +286,7 @@ MonoBehaviour:
   jumpStrength: 5
   facingRight: 1
   running: {fileID: 21300000, guid: 8cf7aa85206e2d844b820e7e127c80a0, type: 3}
-  still: {fileID: 21300020, guid: 8cf7aa85206e2d844b820e7e127c80a0, type: 3}
+  still: {fileID: 21300002, guid: 8cf7aa85206e2d844b820e7e127c80a0, type: 3}
   jumping: {fileID: 21300016, guid: 8cf7aa85206e2d844b820e7e127c80a0, type: 3}
 --- !u!65 &266853546
 BoxCollider:
@@ -663,11 +663,15 @@ Prefab:
     - target: {fileID: 21206002, guid: 25d0fb4e67776244c8f0fff0cf27c650, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8cf7aa85206e2d844b820e7e127c80a0,
+      objectReference: {fileID: 21300020, guid: 8cf7aa85206e2d844b820e7e127c80a0,
         type: 3}
     - target: {fileID: 6506002, guid: 25d0fb4e67776244c8f0fff0cf27c650, type: 2}
       propertyPath: m_Size.y
       value: 1.27999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406002, guid: 25d0fb4e67776244c8f0fff0cf27c650, type: 2}
+      propertyPath: jumpStrength
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25d0fb4e67776244c8f0fff0cf27c650, type: 2}

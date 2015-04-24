@@ -22,6 +22,12 @@ public class Character : MonoBehaviour {
         Debug.Log("Jump");
         rigidbody.AddForce(Vector3.up * jumpStrength);
     }
+    public void Shoot()//Possibly Shoot
+    {
+        //ToDo
+        //Put weapon firing code here
+        Debug.Log("Bang!");
+    }
     public bool OnGround()
     {
         Ray ray = new Ray(transform.position, transform.up * -1);//raycast down
