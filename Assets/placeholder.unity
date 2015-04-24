@@ -271,7 +271,6 @@ MonoBehaviour:
   maxVelocity: 5
   jumpStrength: 100
   facingRight: 1
-  projectile: {fileID: 0}
   speed: 20
 --- !u!114 &266853545
 MonoBehaviour:
@@ -289,7 +288,6 @@ MonoBehaviour:
   maxVelocity: 5
   jumpStrength: 5
   facingRight: 1
-  projectile: {fileID: 0}
   speed: 20
   running: {fileID: 21300000, guid: 8cf7aa85206e2d844b820e7e127c80a0, type: 3}
   still: {fileID: 21300002, guid: 8cf7aa85206e2d844b820e7e127c80a0, type: 3}
@@ -319,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fe9ada560148d4c86fd5aa65a75b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 153788, guid: f652bf74bd616ea42a530911c53580ac, type: 2}
+  bullet: {fileID: 114072, guid: f652bf74bd616ea42a530911c53580ac, type: 2}
   speed: 1000
   damageDelt: 0
 --- !u!1001 &286964742
@@ -1039,6 +1037,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11492568, guid: 25d0fb4e67776244c8f0fff0cf27c650, type: 2}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 114072, guid: f652bf74bd616ea42a530911c53580ac, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25d0fb4e67776244c8f0fff0cf27c650, type: 2}
   m_RootGameObject: {fileID: 266853540}
