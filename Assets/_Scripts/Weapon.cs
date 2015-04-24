@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
     public GameObject bullet; //= GameObject.Find("Bullet");
     public float speed = 1000;
     public float damageDelt;
+    public bool isShooting = false;
     // Use this for initialization
     void Start()
     {
@@ -19,11 +20,13 @@ public class Weapon : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
+
         }
     }
 
     public void Shoot()
     {
+        isShooting = true;
         var direction = gameObject.GetComponent<Character>();
         Quaternion rotation = new Quaternion();
         rotation.z = -90;
@@ -31,11 +34,13 @@ public class Weapon : MonoBehaviour
         if(direction.facingRight == true)
         {
             instantiatedBullet.rigidbody.AddForce(Vector3.right * speed);
+            isShooting = false;
             Destroy(instantiatedBullet, 1);
         }
         else if(direction.facingRight == false)
         {
             instantiatedBullet.rigidbody.AddForce(Vector3.left * speed);
+            isShooting = false;
             Destroy(instantiatedBullet, 1);
         }
     }
