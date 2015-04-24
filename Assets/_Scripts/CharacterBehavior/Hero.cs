@@ -26,11 +26,6 @@ public class Hero : Character {
             {
                 Jump();  
             }
-            if (Input.GetAxis("Fire1") != 0)
-            {
-                Shoot();
-            }
- 	        
         }
     }
 

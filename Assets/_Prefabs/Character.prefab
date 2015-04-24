@@ -12,6 +12,8 @@ GameObject:
   - 54: {fileID: 5406002}
   - 114: {fileID: 11406002}
   - 65: {fileID: 6506002}
+  - 114: {fileID: 11492570}
+  - 114: {fileID: 11492568}
   m_Layer: 9
   m_Name: Character
   m_TagString: Untagged
@@ -56,7 +58,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.39999998, z: .200000003}
+  m_Size: {x: 1, y: 1.27999997, z: .200000003}
   m_Center: {x: 0, y: -0, z: 0}
 --- !u!114 &11406002
 MonoBehaviour:
@@ -69,10 +71,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7569c9297e4498e459f9be316c079c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  facingRight: 1
   forceMultiplier: 15
   maxVelocity: 5
-  jumpStrength: 500
+  jumpStrength: 100
+  facingRight: 1
+  projectile: {fileID: 0}
+  speed: 20
+--- !u!114 &11492568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fe9ada560148d4c86fd5aa65a75b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 153788, guid: f652bf74bd616ea42a530911c53580ac, type: 2}
+  speed: 1000
+  damageDelt: 0
+--- !u!114 &11492570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b2db3e06da4404c8c2fd4421803769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceMultiplier: 15
+  maxVelocity: 5
+  jumpStrength: 5
+  facingRight: 1
+  projectile: {fileID: 0}
+  speed: 20
+  running: {fileID: 21300000, guid: 8cf7aa85206e2d844b820e7e127c80a0, type: 3}
+  still: {fileID: 21300002, guid: 8cf7aa85206e2d844b820e7e127c80a0, type: 3}
+  jumping: {fileID: 21300016, guid: 8cf7aa85206e2d844b820e7e127c80a0, type: 3}
 --- !u!212 &21206002
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -93,7 +131,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9ad8883dffc2df546b275ad7cfaebc8c, type: 3}
+  m_Sprite: {fileID: 21300020, guid: 8cf7aa85206e2d844b820e7e127c80a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
