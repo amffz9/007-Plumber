@@ -22,7 +22,7 @@ public class Hero : Character {
 
             rigidbody.AddForce(x, 0, 0);
 
-            if (Input.GetKeyDown(KeyCode.Space) && OnGround())
+            if (Input.GetKeyDown(KeyCode.UpArrow) && OnGround())
             {
                 Jump();  
             }
