@@ -18,7 +18,7 @@ public class Character : MonoBehaviour {
     {
 
     }
-    public void Jump()//use on GetKeyDown or equivilent
+    public void Jump()//use on GetKeyDown or equivalent
     {
         Debug.Log("Jump");
         rigidbody.AddForce(Vector3.up * jumpStrength);
