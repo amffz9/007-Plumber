@@ -1,20 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Weapon : MonoBehaviour {
+public class Weapon : MonoBehaviour
+{
 
-    public Rigidbody projectile;
-    public float speed = 20;
+    public GameObject bullet; //= GameObject.Find("Bullet");
+    public float speed = 1000;
     public float damageDelt;
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () 
+    // Use this for initialization
+    void Start()
     {
-        if(Input.GetButtonDown("Fire1"))
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
@@ -22,11 +24,11 @@ public class Weapon : MonoBehaviour {
 
     public void Shoot()
     {
-        Rigidbody instantiatedProjectile = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
-        instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
+        var instantiatedBullet = Instantiate(bullet, transform.position, transform.rotation) as GameObject;  
+        instantiatedBullet.rigidbody.AddForce(Vector3.right * speed);
     }
 
-    void Kick ()
+    void Kick()
     {
 
     }

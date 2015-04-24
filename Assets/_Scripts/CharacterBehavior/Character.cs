@@ -8,7 +8,6 @@ public class Character : MonoBehaviour {
     public float maxVelocity = 5f;
     public float jumpStrength = 5f;
     public bool facingRight = true;
-    public Rigidbody projectile;
     public float speed = 20;
 
     void Update()
