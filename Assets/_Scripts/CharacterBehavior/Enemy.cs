@@ -26,11 +26,6 @@ public class Enemy : Character {
         {
             Jump();
         }
-        if (Input.GetAxis("Fire1") != 0)
-        {
-            Shoot();
-        }
-
     }
 	
 }
