@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class followCam : MonoBehaviour {
-	static public followCam S;
+public class FollowCam : MonoBehaviour {
+	static public FollowCam S;
 	public float easing = .05f;
 	public Vector2 minXY;
 	public bool _________________;
