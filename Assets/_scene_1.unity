@@ -640,7 +640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceMultiplier: 15
   maxVelocity: 5
-  jumpStrength: 100
+  jumpStrength: 25
   facingRight: 1
   speed: 20
 --- !u!54 &923108804
@@ -845,6 +845,7 @@ GameObject:
   - 124: {fileID: 1270039948}
   - 81: {fileID: 1270039947}
   - 114: {fileID: 1270039952}
+  - 82: {fileID: 1270039953}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -933,6 +934,64 @@ MonoBehaviour:
   _________________: 0
   poi: {fileID: 0}
   camZ: 0
+--- !u!82 &1270039953
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270039946}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 18debf4db3136f64abecceb8caaf607b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1273773699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1661,6 +1720,10 @@ Prefab:
     - target: {fileID: 406002, guid: 25d0fb4e67776244c8f0fff0cf27c650, type: 2}
       propertyPath: m_RootOrder
       value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406002, guid: 25d0fb4e67776244c8f0fff0cf27c650, type: 2}
+      propertyPath: jumpStrength
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25d0fb4e67776244c8f0fff0cf27c650, type: 2}
